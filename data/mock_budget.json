@@ -1,0 +1,225 @@
+{
+  "fiscal_year": 2026,
+  "quarters": {
+    "Q1": {
+      "total_budget": 4200000,
+      "total_spent": 3780000,
+      "utilization_pct": 90.0,
+      "departments": {
+        "Engineering": {
+          "allocated": 1800000,
+          "spent": 1620000,
+          "remaining": 180000,
+          "categories": {
+            "salaries": 1200000,
+            "cloud_infra": 280000,
+            "tools_licenses": 90000,
+            "contractor_fees": 50000
+          }
+        },
+        "Marketing": {
+          "allocated": 900000,
+          "spent": 870000,
+          "remaining": 30000,
+          "categories": {
+            "digital_ads": 420000,
+            "content_production": 180000,
+            "events": 150000,
+            "agency_fees": 120000
+          }
+        },
+        "Sales": {
+          "allocated": 750000,
+          "spent": 690000,
+          "remaining": 60000,
+          "categories": {
+            "salaries": 480000,
+            "travel": 95000,
+            "commission": 85000,
+            "crm_tools": 30000
+          }
+        },
+        "Operations": {
+          "allocated": 450000,
+          "spent": 360000,
+          "remaining": 90000,
+          "categories": {
+            "office_lease": 180000,
+            "utilities": 45000,
+            "insurance": 75000,
+            "supplies": 60000
+          }
+        },
+        "HR": {
+          "allocated": 300000,
+          "spent": 240000,
+          "remaining": 60000,
+          "categories": {
+            "recruiting": 120000,
+            "training": 60000,
+            "benefits_admin": 45000,
+            "employee_programs": 15000
+          }
+        }
+      }
+    },
+    "Q2": {
+      "total_budget": 4500000,
+      "total_spent": 3150000,
+      "utilization_pct": 70.0,
+      "departments": {
+        "Engineering": {
+          "allocated": 2000000,
+          "spent": 1400000,
+          "remaining": 600000,
+          "categories": {
+            "salaries": 1250000,
+            "cloud_infra": 310000,
+            "tools_licenses": 95000,
+            "contractor_fees": 45000
+          }
+        },
+        "Marketing": {
+          "allocated": 950000,
+          "spent": 665000,
+          "remaining": 285000,
+          "categories": {
+            "digital_ads": 350000,
+            "content_production": 140000,
+            "events": 100000,
+            "agency_fees": 75000
+          }
+        },
+        "Sales": {
+          "allocated": 800000,
+          "spent": 560000,
+          "remaining": 240000,
+          "categories": {
+            "salaries": 490000,
+            "travel": 70000,
+            "commission": 0,
+            "crm_tools": 0
+          }
+        },
+        "Operations": {
+          "allocated": 450000,
+          "spent": 315000,
+          "remaining": 135000,
+          "categories": {
+            "office_lease": 180000,
+            "utilities": 45000,
+            "insurance": 75000,
+            "supplies": 15000
+          }
+        },
+        "HR": {
+          "allocated": 300000,
+          "spent": 210000,
+          "remaining": 90000,
+          "categories": {
+            "recruiting": 95000,
+            "training": 55000,
+            "benefits_admin": 45000,
+            "employee_programs": 15000
+          }
+        }
+      }
+    },
+    "Q3": {
+      "total_budget": 4800000,
+      "total_spent": 2400000,
+      "utilization_pct": 50.0,
+      "departments": {
+        "Engineering": {
+          "allocated": 2100000,
+          "spent": 1050000,
+          "remaining": 1050000,
+          "categories": {
+            "salaries": 900000,
+            "cloud_infra": 100000,
+            "tools_licenses": 30000,
+            "contractor_fees": 20000
+          }
+        },
+        "Marketing": {
+          "allocated": 1000000,
+          "spent": 500000,
+          "remaining": 500000,
+          "categories": {
+            "digital_ads": 250000,
+            "content_production": 100000,
+            "events": 90000,
+            "agency_fees": 60000
+          }
+        },
+        "Sales": {
+          "allocated": 850000,
+          "spent": 425000,
+          "remaining": 425000,
+          "categories": {
+            "salaries": 350000,
+            "travel": 40000,
+            "commission": 25000,
+            "crm_tools": 10000
+          }
+        },
+        "Operations": {
+          "allocated": 500000,
+          "spent": 250000,
+          "remaining": 250000,
+          "categories": {
+            "office_lease": 135000,
+            "utilities": 35000,
+            "insurance": 55000,
+            "supplies": 25000
+          }
+        },
+        "HR": {
+          "allocated": 350000,
+          "spent": 175000,
+          "remaining": 175000,
+          "categories": {
+            "recruiting": 80000,
+            "training": 40000,
+            "benefits_admin": 35000,
+            "employee_programs": 20000
+          }
+        }
+      }
+    }
+  },
+  "revenue": {
+    "Q1": {
+      "total": 8500000,
+      "by_product": {
+        "Enterprise Platform": { "current": 4200000, "previous_year": 3600000, "yoy_growth_pct": 16.7 },
+        "SMB SaaS": { "current": 2800000, "previous_year": 2500000, "yoy_growth_pct": 12.0 },
+        "Professional Services": { "current": 1100000, "previous_year": 950000, "yoy_growth_pct": 15.8 },
+        "Data Analytics Add-on": { "current": 400000, "previous_year": 0, "yoy_growth_pct": null }
+      }
+    },
+    "Q2": {
+      "total": 9200000,
+      "by_product": {
+        "Enterprise Platform": { "current": 4600000, "previous_year": 3900000, "yoy_growth_pct": 17.9 },
+        "SMB SaaS": { "current": 2950000, "previous_year": 2600000, "yoy_growth_pct": 13.5 },
+        "Professional Services": { "current": 1150000, "previous_year": 1000000, "yoy_growth_pct": 15.0 },
+        "Data Analytics Add-on": { "current": 500000, "previous_year": 0, "yoy_growth_pct": null }
+      }
+    },
+    "Q3": {
+      "total": 9800000,
+      "by_product": {
+        "Enterprise Platform": { "current": 4900000, "previous_year": 4100000, "yoy_growth_pct": 19.5 },
+        "SMB SaaS": { "current": 3100000, "previous_year": 2700000, "yoy_growth_pct": 14.8 },
+        "Professional Services": { "current": 1200000, "previous_year": 1050000, "yoy_growth_pct": 14.3 },
+        "Data Analytics Add-on": { "current": 600000, "previous_year": 150000, "yoy_growth_pct": 300.0 }
+      }
+    }
+  },
+  "forecast": {
+    "Q4_2026": { "projected_revenue": 10500000, "projected_costs": 5200000, "projected_margin_pct": 50.5 },
+    "Q1_2027": { "projected_revenue": 11200000, "projected_costs": 5400000, "projected_margin_pct": 51.8 },
+    "Q2_2027": { "projected_revenue": 12000000, "projected_costs": 5600000, "projected_margin_pct": 53.3 }
+  }
+}

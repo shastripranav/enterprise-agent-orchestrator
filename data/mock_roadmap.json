@@ -1,0 +1,225 @@
+{
+  "fiscal_year": 2026,
+  "roadmap": {
+    "Q2": {
+      "theme": "Platform Reliability & Scale",
+      "initiatives": [
+        {
+          "id": "INIT-201",
+          "name": "Zero-downtime deployment pipeline",
+          "status": "completed",
+          "owner": "Platform Team",
+          "start_date": "2026-01-15",
+          "end_date": "2026-04-30",
+          "progress_pct": 100
+        },
+        {
+          "id": "INIT-202",
+          "name": "Multi-region failover",
+          "status": "in_progress",
+          "owner": "Infrastructure Team",
+          "start_date": "2026-02-01",
+          "end_date": "2026-06-30",
+          "progress_pct": 65
+        }
+      ]
+    },
+    "Q3": {
+      "theme": "AI-Powered Features",
+      "initiatives": [
+        {
+          "id": "INIT-301",
+          "name": "AI-powered search and recommendations",
+          "status": "in_progress",
+          "owner": "ML Team",
+          "start_date": "2026-04-01",
+          "end_date": "2026-09-30",
+          "progress_pct": 35
+        },
+        {
+          "id": "INIT-302",
+          "name": "Natural language query interface",
+          "status": "planning",
+          "owner": "Product Team",
+          "start_date": "2026-06-01",
+          "end_date": "2026-09-30",
+          "progress_pct": 10
+        },
+        {
+          "id": "INIT-303",
+          "name": "Automated anomaly detection",
+          "status": "in_progress",
+          "owner": "Data Engineering",
+          "start_date": "2026-05-15",
+          "end_date": "2026-08-31",
+          "progress_pct": 45
+        }
+      ]
+    },
+    "Q4": {
+      "theme": "Enterprise Expansion",
+      "initiatives": [
+        {
+          "id": "INIT-401",
+          "name": "SOC 2 Type II compliance",
+          "status": "planning",
+          "owner": "Security Team",
+          "start_date": "2026-07-01",
+          "end_date": "2026-12-31",
+          "progress_pct": 5
+        },
+        {
+          "id": "INIT-402",
+          "name": "Self-service analytics dashboard",
+          "status": "not_started",
+          "owner": "Product Team",
+          "start_date": "2026-08-01",
+          "end_date": "2026-11-30",
+          "progress_pct": 0
+        },
+        {
+          "id": "INIT-403",
+          "name": "API v3 with GraphQL support",
+          "status": "not_started",
+          "owner": "Platform Team",
+          "start_date": "2026-09-01",
+          "end_date": "2026-12-31",
+          "progress_pct": 0
+        }
+      ]
+    }
+  },
+  "resource_allocation": {
+    "Platform Team": {
+      "headcount": 12,
+      "projects": {
+        "INIT-201": 0.3,
+        "INIT-403": 0.2,
+        "maintenance": 0.5
+      }
+    },
+    "ML Team": {
+      "headcount": 8,
+      "projects": {
+        "INIT-301": 0.6,
+        "INIT-303": 0.25,
+        "research": 0.15
+      }
+    },
+    "Infrastructure Team": {
+      "headcount": 6,
+      "projects": {
+        "INIT-202": 0.5,
+        "on_call": 0.3,
+        "tooling": 0.2
+      }
+    },
+    "Product Team": {
+      "headcount": 10,
+      "projects": {
+        "INIT-302": 0.35,
+        "INIT-402": 0.25,
+        "customer_feedback": 0.2,
+        "backlog_grooming": 0.2
+      }
+    },
+    "Security Team": {
+      "headcount": 4,
+      "projects": {
+        "INIT-401": 0.6,
+        "vulnerability_mgmt": 0.25,
+        "incident_response": 0.15
+      }
+    },
+    "Data Engineering": {
+      "headcount": 7,
+      "projects": {
+        "INIT-303": 0.4,
+        "pipeline_maintenance": 0.35,
+        "data_quality": 0.25
+      }
+    }
+  },
+  "project_timelines": {
+    "INIT-301": {
+      "name": "AI-powered search and recommendations",
+      "milestones": [
+        { "name": "Requirements & data audit", "due_date": "2026-04-30", "status": "completed" },
+        { "name": "Embedding pipeline MVP", "due_date": "2026-06-15", "status": "in_progress" },
+        { "name": "Search integration beta", "due_date": "2026-07-31", "status": "not_started" },
+        { "name": "Recommendation engine v1", "due_date": "2026-08-31", "status": "not_started" },
+        { "name": "GA release", "due_date": "2026-09-30", "status": "not_started" }
+      ]
+    },
+    "INIT-202": {
+      "name": "Multi-region failover",
+      "milestones": [
+        { "name": "Architecture design", "due_date": "2026-02-28", "status": "completed" },
+        { "name": "us-west-2 replica setup", "due_date": "2026-04-15", "status": "completed" },
+        { "name": "Automated failover testing", "due_date": "2026-05-31", "status": "in_progress" },
+        { "name": "Production cutover", "due_date": "2026-06-30", "status": "not_started" }
+      ]
+    },
+    "INIT-401": {
+      "name": "SOC 2 Type II compliance",
+      "milestones": [
+        { "name": "Gap analysis", "due_date": "2026-07-31", "status": "in_progress" },
+        { "name": "Control implementation", "due_date": "2026-09-30", "status": "not_started" },
+        { "name": "Auditor engagement", "due_date": "2026-10-31", "status": "not_started" },
+        { "name": "Observation period complete", "due_date": "2026-12-31", "status": "not_started" }
+      ]
+    }
+  },
+  "risks": [
+    {
+      "id": "RISK-01",
+      "category": "technical",
+      "title": "ML model accuracy below threshold for search relevance",
+      "probability": "medium",
+      "impact": "high",
+      "mitigation": "Parallel evaluation with existing keyword search, gradual rollout with feature flags",
+      "owner": "ML Team",
+      "related_initiative": "INIT-301"
+    },
+    {
+      "id": "RISK-02",
+      "category": "resource",
+      "title": "Key infrastructure engineer attrition risk",
+      "probability": "low",
+      "impact": "critical",
+      "mitigation": "Cross-training program, documentation sprint, retention bonus approved",
+      "owner": "Engineering Leadership",
+      "related_initiative": "INIT-202"
+    },
+    {
+      "id": "RISK-03",
+      "category": "compliance",
+      "title": "SOC 2 audit timeline slip due to control gaps",
+      "probability": "medium",
+      "impact": "high",
+      "mitigation": "Hired external compliance consultant, weekly checkpoint with auditor",
+      "owner": "Security Team",
+      "related_initiative": "INIT-401"
+    },
+    {
+      "id": "RISK-04",
+      "category": "market",
+      "title": "Competitor launches similar AI features before us",
+      "probability": "high",
+      "impact": "medium",
+      "mitigation": "Accelerated MVP timeline, focus on differentiated enterprise features",
+      "owner": "Product Team",
+      "related_initiative": "INIT-301"
+    },
+    {
+      "id": "RISK-05",
+      "category": "operational",
+      "title": "Storage growth exceeding capacity plan by Q4",
+      "probability": "medium",
+      "impact": "medium",
+      "mitigation": "Implementing data lifecycle policies, archival to S3 Glacier",
+      "owner": "Infrastructure Team",
+      "related_initiative": null
+    }
+  ]
+}

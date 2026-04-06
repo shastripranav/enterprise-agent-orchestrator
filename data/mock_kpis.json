@@ -1,0 +1,129 @@
+{
+  "snapshot_date": "2026-03-29",
+  "platform_kpis": {
+    "uptime_pct": 99.94,
+    "avg_latency_ms": 142,
+    "p99_latency_ms": 680,
+    "error_rate_pct": 0.12,
+    "throughput_rps": 8450,
+    "active_users_daily": 34200,
+    "deployment_frequency_per_week": 12
+  },
+  "sla_compliance": {
+    "API Gateway": {
+      "target_uptime_pct": 99.95,
+      "actual_uptime_pct": 99.97,
+      "status": "met",
+      "target_latency_ms": 200,
+      "actual_latency_ms": 145
+    },
+    "Auth Service": {
+      "target_uptime_pct": 99.99,
+      "actual_uptime_pct": 99.98,
+      "status": "breached",
+      "target_latency_ms": 100,
+      "actual_latency_ms": 88
+    },
+    "Data Pipeline": {
+      "target_uptime_pct": 99.9,
+      "actual_uptime_pct": 99.92,
+      "status": "met",
+      "target_latency_ms": 5000,
+      "actual_latency_ms": 3200
+    },
+    "Search Service": {
+      "target_uptime_pct": 99.9,
+      "actual_uptime_pct": 99.85,
+      "status": "breached",
+      "target_latency_ms": 300,
+      "actual_latency_ms": 410
+    },
+    "Notification Service": {
+      "target_uptime_pct": 99.5,
+      "actual_uptime_pct": 99.88,
+      "status": "met",
+      "target_latency_ms": 1000,
+      "actual_latency_ms": 620
+    }
+  },
+  "incidents": [
+    {
+      "id": "INC-2026-0341",
+      "severity": "critical",
+      "title": "Auth service token validation timeout",
+      "service": "Auth Service",
+      "started_at": "2026-03-27T02:15:00Z",
+      "resolved_at": "2026-03-27T03:42:00Z",
+      "duration_minutes": 87,
+      "root_cause": "Redis cluster failover during scaling event",
+      "impact": "~2100 users experienced login failures"
+    },
+    {
+      "id": "INC-2026-0340",
+      "severity": "high",
+      "title": "Search index corruption after reindex job",
+      "service": "Search Service",
+      "started_at": "2026-03-25T14:30:00Z",
+      "resolved_at": "2026-03-25T16:10:00Z",
+      "duration_minutes": 100,
+      "root_cause": "Partial index write during concurrent compaction",
+      "impact": "Search results incomplete for enterprise tier"
+    },
+    {
+      "id": "INC-2026-0339",
+      "severity": "medium",
+      "title": "Elevated error rate on data pipeline ingestion",
+      "service": "Data Pipeline",
+      "started_at": "2026-03-24T08:00:00Z",
+      "resolved_at": "2026-03-24T09:15:00Z",
+      "duration_minutes": 75,
+      "root_cause": "Schema mismatch from upstream provider change",
+      "impact": "12% of batch records dropped, reprocessed after fix"
+    },
+    {
+      "id": "INC-2026-0338",
+      "severity": "low",
+      "title": "Notification delivery delay",
+      "service": "Notification Service",
+      "started_at": "2026-03-22T11:00:00Z",
+      "resolved_at": "2026-03-22T11:45:00Z",
+      "duration_minutes": 45,
+      "root_cause": "SQS queue throttling due to burst limit",
+      "impact": "Push notifications delayed 5-10 min for subset of users"
+    },
+    {
+      "id": "INC-2026-0337",
+      "severity": "critical",
+      "title": "Database primary failover in us-east-1",
+      "service": "API Gateway",
+      "started_at": "2026-03-20T19:30:00Z",
+      "resolved_at": "2026-03-20T20:05:00Z",
+      "duration_minutes": 35,
+      "root_cause": "EBS volume IOPS exhaustion during peak traffic",
+      "impact": "Full platform unavailable for 8 minutes during failover"
+    }
+  ],
+  "capacity": {
+    "compute": {
+      "total_cpu_cores": 512,
+      "used_cpu_cores": 358,
+      "utilization_pct": 69.9
+    },
+    "memory": {
+      "total_gb": 2048,
+      "used_gb": 1434,
+      "utilization_pct": 70.0
+    },
+    "storage": {
+      "total_tb": 50,
+      "used_tb": 32.5,
+      "utilization_pct": 65.0,
+      "growth_rate_tb_per_month": 1.8
+    },
+    "network": {
+      "bandwidth_gbps": 10,
+      "avg_utilization_pct": 42.0,
+      "peak_utilization_pct": 78.0
+    }
+  }
+}
