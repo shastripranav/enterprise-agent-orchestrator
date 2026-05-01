@@ -1,5 +1,7 @@
 # Enterprise Multi-Agent Orchestrator
 
+[![CI](https://github.com/shastripranav/enterprise-agent-orchestrator/actions/workflows/ci.yml/badge.svg)](https://github.com/shastripranav/enterprise-agent-orchestrator/actions/workflows/ci.yml)
+
 Hub-and-spoke multi-agent system using LangGraph — routes enterprise queries to Finance, Operations, and Planning specialist agents via hybrid keyword + LLM routing.
 
 ## Architecture
