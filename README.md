@@ -6,6 +6,36 @@ Hub-and-spoke multi-agent system using LangGraph — routes enterprise queries t
 
 ## Architecture
 
+**Supervisor pattern:**
+
+```mermaid
+flowchart TB
+    User([User Query]) --> UI[Streamlit UI<br/>or CLI]
+    UI --> Supervisor[Supervisor]
+
+    Supervisor --> Router{Routing<br/>keyword + LLM}
+
+    Router -->|finance| Finance[Finance Agent]
+    Router -->|operations| Ops[Operations Agent]
+    Router -->|planning| Planning[Planning Agent]
+    Router -->|multi-domain| FanOut[Fan-Out]
+
+    FanOut --> Finance
+    FanOut --> Ops
+    FanOut --> Planning
+
+    Finance --> Aggregator[Response Aggregator]
+    Ops --> Aggregator
+    Planning --> Aggregator
+
+    Aggregator -->|synthesized answer| UI
+
+    classDef agent fill:#eef,stroke:#447,stroke-width:1px
+    class Finance,Ops,Planning agent
+```
+
+Plain-text version:
+
 ```
                     ┌──────────────────────┐
                     │     User Query       │
