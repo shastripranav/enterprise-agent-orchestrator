@@ -1,0 +1,74 @@
+# Evaluation harness for the supervisor routing layer.
+# Each query lists the specialist(s) the supervisor should route to and
+# keywords expected to appear in the synthesized response.
+#
+# Schema:
+#   - id: <stable identifier>
+#     query: <user query string>
+#     expected_routing: [<agent_name>, ...]   # one or more of: finance, operations, planning
+#     expected_keywords: [<substring>, ...]   # case-insensitive substrings expected in the response
+
+queries:
+  # Single-domain: finance
+  - id: q_finance_revenue
+    query: "What was our Q3 revenue and how does it compare to Q2?"
+    expected_routing: [finance]
+    expected_keywords: [revenue, quarter]
+
+  - id: q_finance_roi
+    query: "Calculate the ROI on the data platform investment over the last 12 months."
+    expected_routing: [finance]
+    expected_keywords: [roi, investment]
+
+  - id: q_finance_burn
+    query: "Forecast next year's monthly burn rate at current spending pace."
+    expected_routing: [finance]
+    expected_keywords: [burn, monthly]
+
+  # Single-domain: operations
+  - id: q_ops_fulfillment
+    query: "Which warehouse has the slowest order fulfillment time and why?"
+    expected_routing: [operations]
+    expected_keywords: [warehouse, fulfillment]
+
+  - id: q_ops_utilization
+    query: "What is the current capacity utilization across our production lines?"
+    expected_routing: [operations]
+    expected_keywords: [capacity, utilization]
+
+  - id: q_ops_bottleneck
+    query: "Identify the top three operational bottlenecks in the supply chain."
+    expected_routing: [operations]
+    expected_keywords: [bottleneck, supply]
+
+  # Single-domain: planning
+  - id: q_planning_milestones
+    query: "What are the key strategic milestones for the next quarter?"
+    expected_routing: [planning]
+    expected_keywords: [milestone, strategic]
+
+  - id: q_planning_expansion
+    query: "Should we expand into APAC in 2027? What does the strategic roadmap suggest?"
+    expected_routing: [planning]
+    expected_keywords: [expansion, roadmap]
+
+  - id: q_planning_3year
+    query: "Build a 3-year strategic plan for the new product line."
+    expected_routing: [planning]
+    expected_keywords: [3-year, strategic]
+
+  # Multi-domain
+  - id: q_multi_warehouse_finance
+    query: "What is the cash flow impact of expanding to 3 new warehouses?"
+    expected_routing: [finance, operations]
+    expected_keywords: [cash, warehouse]
+
+  - id: q_multi_vendor_risk
+    query: "Compare the financial and operational risks of the new vendor contract."
+    expected_routing: [finance, operations]
+    expected_keywords: [financial, operational, vendor]
+
+  - id: q_multi_compliance
+    query: "What is the planning and operational impact of the new compliance requirement?"
+    expected_routing: [planning, operations]
+    expected_keywords: [compliance, impact]
